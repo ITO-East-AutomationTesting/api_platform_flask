@@ -73,3 +73,5 @@ target/
 data.sqlite
 /migrations/
 /func_list/
+/logs/
+/reports/
