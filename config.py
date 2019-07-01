@@ -125,13 +125,11 @@ class Config:
 
 class DevelopmentConfig(Config):
     SQLALCHEMY_DATABASE_URI = os.environ.get('DEV_DATABASE_URL') or 'sqlite:///' + os.path.join(basedir, 'data.sqlite')
-    # SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://root:123456@47.107.147.188:3306/api_test'
     SCHEDULER_JOBSTORES = {'default': SQLAlchemyJobStore(url=SQLALCHEMY_DATABASE_URI)}
 
 
 class ProductionConfig(Config):
-    SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://root:123456@192.168.112.153:3306/api_test'  # 123456表示密码，test代表数据库名称
-    # SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://root:123456@47.107.147.188:3306/api_test'  # 123456表示密码，test代表数据库名称
+    SQLALCHEMY_DATABASE_URI = 'mysql+pymysql://root:187118tang@192.168.112.228:3306/api_test'  # 123456表示密码，test代表数据库名称
     SCHEDULER_JOBSTORES = {'default': SQLAlchemyJobStore(url=SQLALCHEMY_DATABASE_URI)}
     SQLALCHEMY_TRACK_MODIFICATIONS = True
     SQLALCHEMY_POOL_TIMEOUT = 20

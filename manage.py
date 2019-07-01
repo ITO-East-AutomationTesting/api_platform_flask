@@ -20,8 +20,6 @@ migrate = Migrate(app, db, render_as_batch=True)
 def make_shell_context():
     return dict(app=app, db=db, User=User)
 
-
-@app.cli.command()
 def initdata():
     click.echo('Initializing the roles and permissions and admin...')
     Role.init_role()

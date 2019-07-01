@@ -130,7 +130,7 @@ class Config(db.Model):
     id = db.Column(db.Integer(), primary_key=True, comment='主键，自增')
     num = db.Column(db.Integer(), nullable=True, comment='配置序号')
     name = db.Column(db.String(128), comment='配置名称')
-    variables = db.Column(db.String(21000), comment='配置参数')
+    variables = db.Column(db.Text(), comment='配置参数')
     func_address = db.Column(db.String(128), comment='配置函数')
     project_id = db.Column(db.Integer, db.ForeignKey('project.id'), comment='所属的项目id')
     created_time = db.Column(db.DateTime, index=True, default=datetime.now(), comment='创建时间')
