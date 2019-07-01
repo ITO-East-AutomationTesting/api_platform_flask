@@ -26,7 +26,6 @@ def initdata():
     User.init_user()  # 初始化
     click.echo('Done.')
 
-
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8090, debug=True)
     # app.run(host='172.18.28.41', port=8090, debug=True)
